@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FinalGameScripts\Menu.cs">
+    <Files>
+      <File FileName="Assets\FinalGameScripts\game_\ZombieBehavoir.cs" Line="76" Column="35" />
+      <File FileName="Assets\FinalGameScripts\game_\MusicPlay.cs" Line="18" Column="15" />
+      <File FileName="Assets\FinalGameScripts\Menu.cs" Line="58" Column="16" />
+      <File FileName="Assets\FinalGameScripts\ZombieStats.cs" Line="8" Column="31" />
+      <File FileName="Assets\FinalGameScripts\Credits.cs" Line="18" Column="3" />
+      <File FileName="Assets\FinalGameScripts\game_\CivMovement.cs" Line="58" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
