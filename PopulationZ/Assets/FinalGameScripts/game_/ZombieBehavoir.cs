@@ -3,12 +3,12 @@ using System.Collections;
 
 public class ZombieBehavoir : MonoBehaviour {
 	//public enum State {wander, chase};
-	public Transform target;
+	public Vector3 target; //used in wander and to hold civ position
 	
 	
 	//State state;
 	GameObject[] civilians;
-	
+
 	GameObject zombiestats;
 	
 	//Stats from Menu
@@ -19,6 +19,8 @@ public class ZombieBehavoir : MonoBehaviour {
 	public float infectChance;// = 50;
 	public float setLifeSpan;// = 30; //seconds
 	public float lifeSpan;
+
+	public NavMeshAgent navAgent;
 	public NavMeshPathStatus pathStatusC;
 	
 	
@@ -52,35 +54,41 @@ public class ZombieBehavoir : MonoBehaviour {
 		civilians = GameObject.FindGameObjectsWithTag("c");	
 	}
 	void FindTarget(){
-		System.Collections.Generic.List<float> distances = new System.Collections.Generic.List<float>();
-		foreach( GameObject civil in civilians)
-		{
-				float distance = Vector3.Distance(this.transform.position, civil.transform.position);
-				distances.Add (distance);
-		}
-		distances.Sort();
-		//if civilian is close enough run to it
-		//print (civilians.Length.ToString() );
 		if(civilians.Length == 0){
-			//print ("No civilains");
+			Wander ();
 			return;
 		}
-		//if(distances[0] <= 15){
+		else
+		{
+			System.Collections.Generic.List<float> distances = new System.Collections.Generic.List<float>();
 			foreach( GameObject civil in civilians)
 			{
-				//try{
-					if(Vector3.Distance(this.transform.position, civil.transform.position) == distances[0]){
-						//state = State.chase;
-						target = civil.transform;
-						GetComponent<NavMeshAgent>().SetDestination(civil.transform.position);
-						pathStatusC = GetComponent<NavMeshAgent>().pathStatus;
-						return;
-					}
-				//}
-				//catch{
-				//wander ();	
-				//}
+					float distance = Vector3.Distance(this.transform.position, civil.transform.position);
+					distances.Add (distance);
 			}
+			distances.Sort();
+			//if civilian is close enough run to it
+			//print (civilians.Length.ToString() );
+
+			if(distances[0] <= 15)
+			{
+				foreach( GameObject civil in civilians)
+				{
+						if(Vector3.Distance(this.transform.position, civil.transform.position) == distances[0])
+						{
+							//state = State.chase;
+							target = civil.transform.position;
+							GetComponent<NavMeshAgent>().SetDestination(civil.transform.position);
+							pathStatusC = GetComponent<NavMeshAgent>().pathStatus;
+							return;
+						}
+					}
+			}
+			else
+			{
+				Wander ();
+			}
+		}
 		
 	} 
 	
@@ -122,10 +130,23 @@ public class ZombieBehavoir : MonoBehaviour {
 		}
 	}
 	
-	void wander(){
-		//state = State.wander;
-		Vector3 wayPoint = GameObject.FindGameObjectWithTag("c").GetComponent<CivMovement>().GetWaypoint();
+	void Wander()
+	{
+		if( Vector3.Distance( target, transform.position ) < 15 || !navAgent.hasPath )
+		{
+			target = Random.insideUnitSphere*15;
+			NavMeshHit hit = new NavMeshHit();
+			if( NavMesh.SamplePosition( target , out hit, 500, -1) )
+			{
+				target = hit.position;
+				navAgent.SetDestination( target );
+			}
+			else
+			{
+				print ( "Error: ZombieBehavior - Wander" );
+			}
+		}
 		
-		GetComponent<NavMeshAgent>().destination  = wayPoint;
+		//GetComponent<NavMeshAgent>().destination  = wayPoint;
 	}
 }

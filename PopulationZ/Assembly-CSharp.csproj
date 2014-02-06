@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{07FA582D-6B7B-A120-3D36-920971BFE161}</ProjectGuid>
+	<ProjectGuid>{5AFF2484-439D-5EBA-5880-0CFFEB92F7F9}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;UNITY_64;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_3;UNITY_4_3;UNITY_64;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Users/Wintergolem/Desktop/Projects/UnityProject/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Users/Wintergolem/Desktop/Projects/UnityProject/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -71,31 +71,18 @@
      <Compile Include="Assets\FinalGameScripts\game_\Shooting.cs" />
      <Compile Include="Assets\FinalGameScripts\game_\ZombieBehavoir.cs" />
      <Compile Include="Assets\FinalGameScripts\game_\movement.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Archive\RootMotionControllerv1\Plugins\Mixamo\RootMotionComputer.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Archive\RootMotionControllerv1\Scripts\RootMotionCharacter.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Aux Scripts\AnimationGraph.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Aux Scripts\AnimationInfo.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Aux Scripts\ExtendendMonoBehaviour.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Aux Scripts\MixamoJSON.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Aux Scripts\Util.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Blank Scripts for You\YourController.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Scripts\AnimationStateMachine.cs" />
-     <Compile Include="Assets\Power Plant.fbm\AnimationStateMachine\Scripts\MixamoDemoControlScript.cs" />
      <Compile Include="Assets\ScriptsTutorial\RayCasting.cs" />
      <Compile Include="Assets\ScriptsTutorial\ReportDistance.cs" />
      <Compile Include="Assets\ScriptsTutorial\Spawner.cs" />
      <Compile Include="Assets\ScriptsTutorial\Timer.cs" />
-     <None Include="Assets\Power Plant.fbm\AnimationStateMachine\README.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Power Plant.fbm\AnimationStateMachine\Blank Scripts for You\YourGraph.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
-     <None Include="Assets\Power Plant.fbm\AnimationStateMachine\Scripts\demo_motion_pack.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{853BE8B4-498D-3AE9-F86A-58D9C64FDE20}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{C64E2B2F-48C3-1D3E-8AAA-9EBFD3915129}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{B66AF196-2398-949B-212D-DC6BE344BBAB}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{96C046D5-BDAC-B8AB-0F89-9AA8AF3EDF59}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
